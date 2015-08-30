@@ -12,8 +12,10 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @RequestMapping("/hello-world")
 public class HelloWorldController {
 
-    private static final String template = "Hello, %s!";
+    private static final String template = "Hello dash, %s!";
     private final AtomicLong counter = new AtomicLong();
+    private static final String template2 = "Hello dash, %s!";
+
 
     @RequestMapping(method=RequestMethod.GET)
     public @ResponseBody Greeting sayHello(@RequestParam(value="name", required=false, defaultValue="Stranger") String name) {
